@@ -23,13 +23,16 @@
         <NuxtLink to="/" class="hover:scale-105 transition duration-200"
           >Dashboard</NuxtLink
         >
-        <NuxtLink to="/progress" class="hover:scale-105 transition duration-200"
-          >Progress</NuxtLink
-        >
         <NuxtLink
           to="/battle-plan"
           class="hover:scale-105 transition duration-200"
           >Battle-plan</NuxtLink
+        >
+        <NuxtLink to="/shop" class="hover:scale-105 transition duration-200"
+          >shop</NuxtLink
+        >
+        <NuxtLink to="/progress" class="hover:scale-105 transition duration-200"
+          >Progress</NuxtLink
         >
         <NuxtLink to="/account" class="hover:scale-105 transition duration-200"
           >Account</NuxtLink
