@@ -102,7 +102,11 @@ function submitCheckin() {
   const mob = player.value.mob;
 
   //mob takes damage
-  player.value.mob.health = Math.max(0, player.value.mob.health - 25);
+  const damage = selectedAttack.value?.damage;
+  player.value.mob.health = Math.max(
+    0,
+    player.value.mob.health - (damage ?? 10)
+  );
   if (player.value.mob.health <= 0) {
     updateBossMobs(mob.id);
     player.value.experience += mob.reward.exp;
