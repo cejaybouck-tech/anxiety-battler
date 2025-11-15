@@ -39,7 +39,13 @@
           </p>
           <div class="flex flex-wrap justify-center md:justify-around gap-4">
             <MobCard
-              v-if="player && player.bosses && player.bosses[0]"
+              v-if="
+                player &&
+                player.bosses &&
+                player.bosses[0] &&
+                player.bosses[0].mobs &&
+                player.bosses[0].mobs.length > 1
+              "
               v-for="(mob, index) in player.bosses[0].mobs"
               :key="mob.id + index"
               class="justify-between rounded-2xl border px-3 py-2 text-left"
@@ -54,18 +60,19 @@
               @click="$emit('select-mob', mob)"
             />
             <UCard
-              v-if="
+              v-else-if="
                 player &&
                 player.bosses &&
                 player.bosses[0] &&
                 player.bosses[0].mobs &&
-                player.bosses[0].mobs.length < 1
+                player.bosses[0].mobs.length === 0
               "
             >
               <p>No more mobs for this Boss!</p>
               <p class="text-sm mt-4">Still feeling unready and anxious?</p>
               <UButton @click="addNewMob" class="mt-2">Add another mob</UButton>
             </UCard>
+            <UButton v-else to="/battle-plan">Create First Boss</UButton>
           </div>
         </div>
       </div>
