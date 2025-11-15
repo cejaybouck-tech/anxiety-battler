@@ -70,7 +70,9 @@
           </div>
 
           <!-- Simple bar chart -->
-          <div class="mt-2 flex items-end gap-2 rounded-2xl border p-3">
+          <div
+            class="mt-2 flex items-end gap-2 rounded-2xl border p-3 overflow-hidden"
+          >
             <div
               v-for="checkin in visibleCheckins"
               :key="checkin.date"
