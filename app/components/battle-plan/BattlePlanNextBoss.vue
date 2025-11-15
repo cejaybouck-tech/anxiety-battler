@@ -34,6 +34,7 @@
               <p class="text-sm text-slate-500">
                 {{ formatDateRange(boss.dateStart, boss.dateEnd) }}
               </p>
+              <UButton to="/attack">Attack!</UButton>
             </div>
           </div>
 
