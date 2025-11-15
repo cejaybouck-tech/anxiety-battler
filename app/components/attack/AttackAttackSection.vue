@@ -15,7 +15,7 @@
         </div>
       </template>
 
-      <div class="flex gap-4">
+      <div class="flex flex-col md:flex-row gap-4">
         <MobCard
           v-if="player && player.mob"
           class="rounded-2xl border-slate-100 bg-slate-50/80"

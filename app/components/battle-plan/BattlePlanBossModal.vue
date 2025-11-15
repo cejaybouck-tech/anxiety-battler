@@ -173,12 +173,12 @@ interface EventFormState {
   anxietyAttached: number;
 }
 
-const difficultyOptions = ref<Difficulty[]>([
-  "easy",
-  "medium",
-  "hard",
-  "very_hard",
-  "panic",
+const difficultyOptions = ref<{ label: string; value: Difficulty }[]>([
+  { label: "easy", value: "easy" },
+  { label: "medium", value: "medium" },
+  { label: "hard", value: "hard" },
+  { label: "very hard", value: "very_hard" },
+  { label: "panic", value: "panic" },
 ]);
 
 const internalOpen = computed({
